@@ -1,0 +1,205 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    box-sizing: border-box;
+    color: rgb(234, 247, 247);
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#nav img{
+    height: 75px;
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+    background-color: black;
+    border-radius: 10px;
+}
+#nav h4{
+    font-size: 20px;
+    font-weight: 900;
+}
+#nav h4:hover{
+    color: rgb(124, 199, 26);
+    cursor: pointer;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+#main{
+    position: relative;
+    background-color: rgba(0,0,0,0.80);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+}
+#page1 h1{
+    font-size: 100px;
+    position: relative;
+    text-shadow: 5px 5px 3px rgb(99, 158, 22);
+    margin-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 900;
+    -webkit-text-stroke: 3px black;
+}
+#page1 h2{
+    font-size: 37px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+#page1 p{
+    font-size: 18px;
+    width: 40%;
+    font-weight: 700;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+marquee{
+    font-size: 60px;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    transition: all linear 0.3s;
+}
+marquee:hover{
+    color: rgb(124, 199, 26);
+    -webkit-text-stroke: 2px rgb(124, 199, 26);
+}
+#about_us{
+    height: 30vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 70px 50px;
+    padding-bottom: 70px;
+    margin-top: 150px;
+}
+#about_us img{
+    height: 180px;
+    width: 180px;
+    border-radius: 20px;
+}
+#about_us_text h3{
+    padding-top: 50px;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+#about_us_text p{
+    padding-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+}
+#card_container{
+    margin-top: 90px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+.card{
+    margin-top: 200px;
+    height: 80%;
+    width: 25%;
+    border-radius: 20px;
+    background-size: cover;
+
+}
+#card1{
+    background-image: url(https://www.wallpaperflare.com/static/901/957/108/nature-grass-plants-close-wallpaper.jpg);
+}
+#card2{
+    background-image: url(https://tse4.mm.bing.net/th/id/OIP.P85kYKWBn_95_0ObK7lDPAHaHa?w=1378&h=1378&rs=1&pid=ImgDetMain);
+}
+#card3{
+    background-image: url(https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/6e/4e/c0/6e4ec036-ed51-3475-fc43-2d44adcc29cb/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg);
+}
+.overlay{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(124, 199, 26);  
+    opacity: 0;
+}
+.overlay:hover{
+    transition: all linear 0.3s;
+    opacity: 1;
+}
+.overlay h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.overlay p{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+.card:hover{
+    transform: rotate3d(0.5,0.5,0,20deg);
+    cursor: pointer;
+}
+#green_box{
+    margin-top: 300px;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom,rgb(35, 151, 6),rgb(124, 199, 26));
+}
+#green_box:hover{
+    cursor: pointer;
+}
+#green_box img{
+    height: 100%;
+    width: 15%;
+    object-fit: cover ;
+}
+#green_box h4{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+}
+#page3{
+    height: 20vh;
+    width: 100%;
+    background-color: black;
+}
+
