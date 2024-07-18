@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Find the perfect plant for your urban garden</h1>
+    <form id="plantinfoForm">
+        <div id="pair">
+        <label for="sunlight">Sunlight:</label>
+        <select id="sunlight" name="sunlight">
+            <option value="full-sun">Full Sun</option>
+            <option value="partial-shade">Partial Shade</option>
+            <option value="full-shade">Full Shade</option>
+        </select>
+        </div>
+        <div id="pair">
+        <label for="water">Water:</label>
+        <select id="water" name="water">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+        </div>
+        <div id="pair">
+        <label for="soil">Soil Type:</label>
+        <select id="soil" name="soil">
+            <option value="sandy">Sandy</option>
+            <option value="loamy">Loamy</option>
+            <option value="clay">Clay</option>
+        </select>
+        </div>
+        <div id="pair">
+        <label for="space">Space:</label>
+        <select id="space" name="space">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        </div>
+        <button type="button" onclick="findPlant()">Submit</button>
+    </form>
+    <div id="result"></div>
+    <button id="return" onclick="returnToIndex()">Return to Homepage</button>
+    <script>
+        function findPlant() {
+            const sunlight = document.getElementById('sunlight').value;
+            const water = document.getElementById('water').value;
+            const soil = document.getElementById('soil').value;
+            const space = document.getElementById('space').value;
+
+            let plant = "";
+            let conditions = "";
+            let funFact = "";
+
+            if (sunlight === "full-sun" && water === "high" && soil === "sandy" && space === "small") {
+                plant = "Sunflower";
+                conditions = "Requires full sun, high water, and sandy soil. Suitable for small spaces.";
+                funFact = "Sunflowers track the sun across the sky during the day!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "sandy" && space === "medium") {
+                plant = "Pumpkin";
+                conditions = "Thrives in full sun, high water, and sandy soil. Requires medium space.";
+                funFact = "Pumpkins can grow to be very large!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "sandy" && space === "large") {
+                plant = "Corn";
+                conditions = "Needs full sun, high water, and sandy soil. Suitable for large spaces.";
+                funFact = "Corn is a staple food crop around the world!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "loamy" && space === "small") {
+                plant = "Strawberry";
+                conditions = "Prefers full sun, high water, and loamy soil. Suitable for small spaces.";
+                funFact = "Strawberries are members of the rose family!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "loamy" && space === "medium") {
+                plant = "Tomato";
+                conditions = "Requires full sun, high water, and loamy soil. Suitable for medium spaces.";
+                funFact = "Tomatoes are technically fruits, not vegetables!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "loamy" && space === "large") {
+                plant = "Zucchini";
+                conditions = "Thrives in full sun, high water, and loamy soil. Requires large space.";
+                funFact = "Zucchinis are a type of summer squash!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "clay" && space === "small") {
+                plant = "Radish";
+                conditions = "Prefers full sun, high water, and clay soil. Suitable for small spaces.";
+                funFact = "Radishes are fast-growing vegetables!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "clay" && space === "medium") {
+                plant = "Cucumber";
+                conditions = "Needs full sun, high water, and clay soil. Suitable for medium spaces.";
+                funFact = "Cucumbers are mostly composed of water!";
+            } else if (sunlight === "full-sun" && water === "high" && soil === "clay" && space === "large") {
+                plant = "Pumpkin";
+                conditions = "Thrives in full sun, high water, and clay soil. Requires large space.";
+                funFact = "Pumpkins can grow to be very large!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "sandy" && space === "small") {
+                plant = "Cactus";
+                conditions = "Prefers full sun, medium water, and sandy soil. Suitable for small spaces.";
+                funFact = "Cacti are well-adapted to dry environments!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "sandy" && space === "medium") {
+                plant = "Pepper";
+                conditions = "Requires full sun, medium water, and sandy soil. Suitable for medium spaces.";
+                funFact = "Peppers come in various colors and flavors!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "sandy" && space === "large") {
+                plant = "Carrot";
+                conditions = "Thrives in full sun, medium water, and sandy soil. Requires large space.";
+                funFact = "Carrots are rich in beta-carotene, which is good for eyesight!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "loamy" && space === "small") {
+                plant = "Lettuce";
+                conditions = "Prefers full sun, medium water, and loamy soil. Suitable for small spaces.";
+                funFact = "Lettuce is one of the easiest vegetables to grow!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "loamy" && space === "medium") {
+                plant = "Squash";
+                conditions = "Requires full sun, medium water, and loamy soil. Suitable for medium spaces.";
+                funFact = "Squash plants produce both male and female flowers!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "loamy" && space === "large") {
+                plant = "Watermelon";
+                conditions = "Thrives in full sun, medium water, and loamy soil. Requires large space.";
+                funFact = "Watermelons are mostly water!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "clay" && space === "small") {
+                plant = "Potato";
+                conditions = "Prefers full sun, medium water, and clay soil. Suitable for small spaces.";
+                funFact = "Potatoes are tubers that grow underground!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "clay" && space === "medium") {
+                plant = "Eggplant";
+                conditions = "Requires full sun, medium water, and clay soil. Suitable for medium spaces.";
+                funFact = "Eggplants belong to the nightshade family!";
+            } else if (sunlight === "full-sun" && water === "medium" && soil === "clay" && space === "large") {
+                plant = "Pumpkin";
+                conditions = "Thrives in full sun, medium water, and clay soil. Requires large space.";
+                funFact = "Pumpkins can grow to be very large!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "sandy" && space === "small") {
+                plant = "Cactus";
+                conditions = "Prefers full sun, low water, and sandy soil. Suitable for small spaces.";
+                funFact = "Cacti are well-adapted to dry environments!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "sandy" && space === "medium") {
+                plant = "Rosemary";
+                conditions = "Thrives in full sun, low water, and sandy soil. Suitable for medium spaces.";
+                funFact = "Rosemary is a fragrant herb used in cooking!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "sandy" && space === "large") {
+                plant = "Palm";
+                conditions = "Needs full sun, low water, and sandy soil. Requires large space.";
+                funFact = "Palms are often associated with tropical climates!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "loamy" && space === "small") {
+                plant = "Thyme";
+                conditions = "Prefers full sun, low water, and loamy soil. Suitable for small spaces.";
+                funFact = "Thyme is a versatile herb used in cooking and medicine!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "loamy" && space === "medium") {
+                plant = "Garlic";
+                conditions = "Requires full sun, low water, and loamy soil. Suitable for medium spaces.";
+                funFact = "Garlic has many health benefits and culinary uses!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "loamy" && space === "large") {
+                plant = "Oregano";
+                conditions = "Thrives in full sun, low water, and loamy soil. Requires large space.";
+                funFact = "Oregano is a popular herb in Mediterranean cuisine!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "clay" && space === "small") {
+                plant = "Sage";
+                conditions = "Prefers full sun, low water, and clay soil. Suitable for small spaces.";
+                funFact = "Sage has a strong, earthy flavor and medicinal properties!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "clay" && space === "medium") {
+                plant = "Onion";
+                conditions = "Requires full sun, low water, and clay soil. Suitable for medium spaces.";
+                funFact = "Onions are used in a wide range of culinary dishes!";
+            } else if (sunlight === "full-sun" && water === "low" && soil === "clay" && space === "large") {
+                plant = "Pumpkin";
+                conditions = "Thrives in full sun, low water, and clay soil. Requires large space.";
+                funFact = "Pumpkins can grow to be very large!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "sandy" && space === "small") {
+                plant = "Fern";
+                conditions = "Prefers partial shade, high water, and sandy soil. Suitable for small spaces.";
+                funFact = "Ferns have ancient origins and diverse forms!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "sandy" && space === "medium") {
+                plant = "Astilbe";
+                conditions = "Thrives in partial shade, high water, and sandy soil. Suitable for medium spaces.";
+                funFact = "Astilbes are known for their feathery flower plumes!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "sandy" && space === "large") {
+                plant = "Bleeding Heart";
+                conditions = "Needs partial shade, high water, and sandy soil. Requires large space.";
+                funFact = "Bleeding hearts have heart-shaped flowers!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "loamy" && space === "small") {
+                plant = "Hosta";
+                conditions = "Prefers partial shade, high water, and loamy soil. Suitable for small spaces.";
+                funFact = "Hostas are known for their beautiful foliage!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "loamy" && space === "medium") {
+                plant = "Lily of the Valley";
+                conditions = "Thrives in partial shade, high water, and loamy soil. Suitable for medium spaces.";
+                funFact = "Lilies of the valley are highly fragrant!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "loamy" && space === "large") {
+                plant = "Begonia";
+                conditions = "Requires partial shade, high water, and loamy soil. Requires large space.";
+                funFact = "Begonias are popular bedding plants!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "clay" && space === "small") {
+                plant = "Fern";
+                conditions = "Prefers partial shade, high water, and clay soil. Suitable for small spaces.";
+                funFact = "Ferns have ancient origins and diverse forms!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "clay" && space === "medium") {
+                plant = "Hydrangea";
+                conditions = "Thrives in partial shade, high water, and clay soil. Suitable for medium spaces.";
+                funFact = "Hydrangeas change color based on soil pH!";
+            } else if (sunlight === "partial-shade" && water === "high" && soil === "clay" && space === "large") {
+                plant = "Fatsia";
+                conditions = "Needs partial shade, high water, and clay soil. Requires large space.";
+                funFact = "Fatsia is a tropical-looking plant with large leaves!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "sandy" && space === "small") {
+                plant = "Japanese Maple";
+                conditions = "Prefers partial shade, medium water, and sandy soil. Suitable for small spaces.";
+                funFact = "Japanese maples have vibrant foliage colors!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "sandy" && space === "medium") {
+                plant = "Hellebore";
+                conditions = "Thrives in partial shade, medium water, and sandy soil. Suitable for medium spaces.";
+                funFact = "Hellebores are early-blooming perennial flowers!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "sandy" && space === "large") {
+                plant = "Camellia";
+                conditions = "Requires partial shade, medium water, and sandy soil. Requires large space.";
+                funFact = "Camellias are famous for their glossy evergreen leaves!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "loamy" && space === "small") {
+                plant = "Coral Bells";
+                conditions = "Prefers partial shade, medium water, and loamy soil. Suitable for small spaces.";
+                funFact = "Coral bells have colorful foliage and delicate flowers!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "loamy" && space === "medium") {
+                plant = "Foxglove";
+                conditions = "Thrives in partial shade, medium water, and loamy soil. Suitable for medium spaces.";
+                funFact = "Foxgloves attract hummingbirds with their tubular flowers!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "loamy" && space === "large") {
+                plant = "Astilbe";
+                conditions = "Requires partial shade, medium water, and loamy soil. Requires large space.";
+                funFact = "Astilbes are known for their feathery flower plumes!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "clay" && space === "small") {
+                plant = "Hosta";
+                conditions = "Prefers partial shade, medium water, and clay soil. Suitable for small spaces.";
+                funFact = "Hostas are known for their beautiful foliage!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "clay" && space === "medium") {
+                plant = "Brunnera";
+                conditions = "Thrives in partial shade, medium water, and clay soil. Suitable for medium spaces.";
+                funFact = "Brunneras have heart-shaped leaves and small blue flowers!";
+            } else if (sunlight === "partial-shade" && water === "medium" && soil === "clay" && space === "large") {
+                plant = "Lungwort";
+                conditions = "Needs partial shade, medium water, and clay soil. Requires large space.";
+                funFact = "Lungworts are known for their spotted leaves and early spring flowers!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "sandy" && space === "small") {
+                plant = "Fern";
+                conditions = "Prefers partial shade, low water, and sandy soil. Suitable for small spaces.";
+                funFact = "Ferns have ancient origins and diverse forms!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "sandy" && space === "medium") {
+                plant = "Lily of the Valley";
+                conditions = "Thrives in partial shade, low water, and sandy soil. Suitable for medium spaces.";
+                funFact = "Lilies of the valley are highly fragrant!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "sandy" && space === "large") {
+                plant = "Azalea";
+                conditions = "Requires partial shade, low water, and sandy soil. Requires large space.";
+                funFact = "Azaleas are popular flowering shrubs!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "loamy" && space === "small") {
+                plant = "Coral Bells";
+                conditions = "Prefers partial shade, low water, and loamy soil. Suitable for small spaces.";
+                funFact = "Coral bells have colorful foliage and delicate flowers!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "loamy" && space === "medium") {
+                plant = "Cyclamen";
+                conditions = "Thrives in partial shade, low water, and loamy soil. Suitable for medium spaces.";
+                funFact = "Cyclamens have unique flowers that bloom in winter!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "loamy" && space === "large") {
+                plant = "Heuchera";
+                conditions = "Requires partial shade, low water, and loamy soil. Requires large space.";
+                funFact = "Heucheras are known for their colorful foliage!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "clay" && space === "small") {
+                plant = "Fern";
+                conditions = "Prefers partial shade, low water, and clay soil. Suitable for small spaces.";
+                funFact = "Ferns have ancient origins and diverse forms!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "clay" && space === "medium") {
+                plant = "Bleeding Heart";
+                conditions = "Thrives in partial shade, low water, and clay soil. Suitable for medium spaces.";
+                funFact = "Bleeding hearts have heart-shaped flowers!";
+            } else if (sunlight === "partial-shade" && water === "low" && soil === "clay" && space === "large") {
+                plant = "Ligularia";
+                conditions = "Needs partial shade, low water, and clay soil. Requires large space.";
+                funFact = "Ligularias are prized for their bold foliage!";
+            } else {
+                plant = "Mint";
+                conditions = "Grows well in various conditions with partial shade, moderate water, and loamy soil. Suitable for medium spaces.";
+                funFact = "Mint is known to have calming effects and can be used in various culinary dishes!";
+            }
+
+            const resultBox = document.getElementById('result');
+            resultBox.innerHTML = `<h2>${plant}</h2><br><p>${conditions}</p><br><p><strong>Fun Fact:</strong> ${funFact}</p>`;
+            resultBox.style.display = 'block';
+        }
+        function returnToIndex() {
+            // Navigate back to index.html
+            window.location.href = 'index.html#card_container';
+        }
+    </script>
+</body>
+</html>
