@@ -74,6 +74,7 @@ video{
     font-size: 18px;
     width: 40%;
     font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #page2{
     min-height: 100vh;
@@ -119,6 +120,7 @@ marquee:hover{
     font-size: 18px;
     text-align: center;
     line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #card_container{
     margin-top: 90px;
