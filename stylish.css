@@ -74,7 +74,6 @@ video{
     font-size: 18px;
     width: 40%;
     font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #page2{
     min-height: 100vh;
@@ -115,12 +114,11 @@ marquee:hover{
 }
 #about_us_text p{
     padding-top: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 18px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 19px;
     text-align: center;
     line-height: 1.5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #card_container{
     margin-top: 90px;
@@ -174,7 +172,6 @@ marquee:hover{
     text-align: center;
 }
 .card:hover{
-    transform: rotate3d(0.5,0.5,0,20deg);
     cursor: pointer;
 }
 #green_box{

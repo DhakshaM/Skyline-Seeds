@@ -10,14 +10,14 @@
   <button type="button" id="closebutton">Close</button>
     <div class="wrapper">
         <div class="form sign-in">
-          <form>
+          <form id="loginForm">
             <h2>Login</h2>
             <div class="input">
-              <input type="text" required>
+              <input type="text" id="loginUsername" required>
               <label>Username</label>
             </div>
             <div class="input">
-              <input type="password" required>
+              <input type="password" id="loginPassword" required>
               <label>Password</label>
             </div>
             <div class="remember">
@@ -27,21 +27,22 @@
             <div class="signUp-link">
               <p>Don't have an account? <a href="#" class="signUpBtn-link">Sign Up</a></p>
             </div>
+            <div id="loginMessage" class="message"></div>
           </form>
         </div>
         <div class="form sign-up">
-          <form>
+          <form id="signUpForm">
             <h2>Sign Up</h2>
             <div class="input">
-              <input type="text" required>
+              <input type="text" id="signUpUsername" required>
               <label>Username</label>
             </div>
             <div class="input">
-              <input type="email" required>
+              <input type="email" id="signUpEmail" required>
               <label>Email</label>
             </div>
             <div class="input">
-              <input type="password" required>
+              <input type="password" id="signUpPassword" required>
               <label>Password</label>
             </div>
             <div class="remember">
@@ -51,6 +52,7 @@
             <div class="signUp-link">
               <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
             </div>
+            <div id="signUpMessage" class="message"></div>
           </form>
         </div>
       </div>
