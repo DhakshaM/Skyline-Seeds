@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500&display=swap');
+/* General styles */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body styling */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://wallpapercave.com/wp/wp7401476.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Main container */
+#main {
+  width: 90vw;
+  max-width: 540px;
+  height: 98vh;
+  background-color: rgba(221, 221, 221, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Title */
+#title h2 {
+  text-align: center;
+  background: rgb(99, 158, 22);
+  padding: 15px;
+  color: #fff;
+  text-shadow: 1px 1px 4px #111;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-family: 'Lora', serif;
+}
+
+/* Message container */
+#msg {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #e6e5e5;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input area */
+.input {
+  display: flex;
+  align-items: center;
+  background: #ececee;
+  border-radius: 32px;
+  padding: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#msg_send {
+  flex-grow: 1;
+  border: none;
+  border-radius: 32px 0 0 32px;
+  padding: 10px;
+  font-size: 1em;
+  background: transparent;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+#msg_send:focus {
+  outline: none;
+}
+
+.send {
+  border: none;
+  background: rgb(99, 158, 22);
+  color: #fff;
+  border-radius: 0 32px 32px 0;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send i {
+  margin-left: 5px;
+}
+
+.send:hover {
+  background-color: #45a049;
+}
+
+.left, .right {
+  font-size: 1em;
+  padding: 10px;
+  max-width: 60%;
+  word-wrap: break-word;
+  margin: 10px 0;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  align-self: flex-end;
+  background: #b3bfca;
+  color: #000;
+  border-radius: 16px 16px 0 16px;
+  margin-left: 200px;
+}
+
+.right {
+  align-self: flex-start;
+  background: rgb(99, 158, 22);
+  color: #fff;
+  border-radius: 16px 16px 16px 0;
+}
+
+/* Bot header */
+#robot {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url(https://img.favpng.com/1/7/10/plant-logo-stock-photography-clip-art-png-favpng-CNz0kUrctKc4F2Wtrzr70RTWA.jpg);
+  background-size: cover;
+  margin-right: 10px;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #333;
+  font-family:Arial, Helvetica, sans-serif;
+}
