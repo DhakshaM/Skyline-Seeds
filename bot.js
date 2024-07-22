@@ -56,6 +56,7 @@ function init() {
     const wellBeing = ["how are you", "how's it going"];
     const plantQuestions = ["plant", "plants", "garden", "gardening"];
     const thanks = ["thank you", "thanks"];
+    const farming = ["urban", "farming"];
   
     const namePattern = /what is your name|who are you/;
     const plantRecommendationPattern = /recommend.*plant|suggest.*plant|which plant/;
@@ -64,6 +65,8 @@ function init() {
         return "Hello! How can I help you today?";
     } else if (wellBeing.some(wb => input.includes(wb))) {
         return "I'm fine. I'm just a bot, but I'm here to help you with your plant queries!";
+    } else if (farming.some(fa => input.includes(fa))) {
+        return "Urban farming, also known as urban agriculture, refers to the cultivation of crops, the raising of animals, or the production of food-related goods within and around urban areas";
     } else if (namePattern.test(input)) {
         return "I'm the Skyline Seeds ChatBot.";
     } else if (plantRecommendationPattern.test(input)) {
