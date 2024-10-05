@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylish.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
@@ -23,12 +23,10 @@
         <div id="page2">
         <marquee behavior="" direction="" scrolldelay="3">CULTIVATE | GARDEN | NURTURE | GROW | HARVEST</marquee>   
         <div id="about_us">
-            <!--<img src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Free-golf-backgrounds-photos-pics.jpg" alt="">-->
             <div id="about_us_text">
             <h3>ABOUT US</h3>
             <p>Our passion for sustainability drives us to empower urbanites with the knowledge and tools to cultivate thriving gardens right in the heart of their communities. Our interactive resources and expert advice ensure you can grow fresh produce and beautiful plants with confidence and joy. Join us in transforming cityscapes into lush, green oases. Explore the possibilities of urban farming with us and experience the joy of harvesting your own sustainable bounty!</p>
             </div>
-            <!--<img src="https://th.bing.com/th/id/R.4435d796dd84b482ec166b5452b21886?rik=cIXcA9XEtINJDw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fpVnGEwZ.jpg&ehk=0HmgzAyrKuOB%2bwMYXTOY4yQXVxsPYubbDQiTX2TnUN0%3d&risl=&pid=ImgRaw&r=0" alt="">-->
         </div>
         <div id="card_container">
             <div class="card" id="card1" onclick="window.location.href='plant-info.html'">
@@ -37,16 +35,10 @@
                     <p>Discover essential plant specifications and care tips tailored for urban gardening. From sunlight needs to watering schedules, master the art of cultivating greenery in your cityscape.</p>
                 </div>
             </div>
-            <!--<div class="card" id="card2">
+            <div class="card" id="card3" onclick="window.location.href='quiz.html'">
                 <div class="overlay">
-                    <h3>QUIZ TIME!</h3>
+                    <h3>QUIZ TIME</h3>
                     <p>Challenge your gardening knowledge with our engaging plant quiz. Test yourself on plant identification, growth requirements, and eco-friendly gardening practices.</p>
-                </div>
-            </div>-->
-            <div class="card" id="card3">
-                <div class="overlay">
-                    <h3>ASSISTANT</h3>
-                    <p>Connect with our interactive chatbot for personalized gardening advice anytime, anywhere. Whether you're troubleshooting plant issues or seeking expert tips, our bot is here to help cultivate your urban garden.</p>
                 </div>
             </div>
         </div>
@@ -83,10 +75,7 @@
         document.getElementById('green_box').addEventListener('click', function() {
    window.location.href = 'login.html';
    });
-   document.getElementById("card3").addEventListener("click", function() {
-            // Redirect to bot.html when the card is clicked
-            window.location.href = "bot.html";
-   });
+   
     </script>
 </body>
 </html>
